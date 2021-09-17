@@ -39,8 +39,14 @@ $ sudo pip install -r requirements.txt
 ```
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
-##### Start kafka service: $ bin/kafka-server-start.sh config/server.properties
-##### Create a topic named twitterstream in kafka: $ bin/kafka-topics.sh --create --zookeeper --partitions 1 --topic twitterstream localhost:2181 --replication-factor 1
+##### Start kafka service:
+```
+$ bin/kafka-server-start.sh config/server.properties
+```
+##### Create a topic named twitterstream in kafka:
+```
+$ bin/kafka-topics.sh --create --zookeeper --partitions 1 --topic twitterstream localhost:2181 --replication-factor 1
+```
 #### Using the Twitter Streaming API In order to download the tweets from twitter streaming API and push them to kafka queue, I have created a python script app.py. The script will need your twitter authentication tokens (keys).
 
 Once you have your authentication tokens, create or update the twitter-app-credentials.txt with these credentials.
